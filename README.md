@@ -17,3 +17,27 @@
 ---
 
 ## 📦 Estructura del repositorio
+
+---
+
+## 📈 Funcionalidades principales
+
+- 📡 Medición en tiempo real de rayos UV, temperatura y humedad.
+- 📲 Visualización de datos desde app móvil.
+- 🚨 Alertas cuando se superan niveles críticos.
+- ☁️ Backend alojado en la nube para acceso remoto.
+
+---
+
+## 📅 Estado del proyecto
+
+> 🔧 En desarrollo – actualmente en fase de construcción del prototipo e integración de sensores.
+
+---
+
+## 👥 Créditos
+
+Desarrollado por: *[Tu nombre o equipo]*  
+Proyecto académico – Universidad [nombre]  
+Ramo: Taller de TICs I / Feria de Proyectos 2025
+
