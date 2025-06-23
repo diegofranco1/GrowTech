@@ -35,8 +35,8 @@ type MonitorScreenProps = {
   navigation: any; // Tipa esto adecuadamente si usas navegación
 };
 
-const API_URL = 'http://192.168.0.8:3000';
-const API_KEY = 'diego1118';
+const API_URL = 'http://***';
+const API_KEY = '****';
 
 const { width } = Dimensions.get('window');
 
