@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+.expo/
+
+# Variables de entorno
+.env
+.env.local
+
+# Archivos de desarrollo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Android/iOS
+android/
+ios/
