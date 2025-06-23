@@ -37,6 +37,8 @@ GrowTech/
 - Radiación UV 🌞  
 - Temperatura 🌡️  
 - Humedad relativa 💧
+- Intensidad de luz 💡
+- Colores detectados: rojo ❤️, verde 💚 y azul 💙
 
 ✅ Visualización remota desde app móvil 📲  
 ✅ Alertas automáticas cuando se detectan niveles peligrosos ⚠️  
@@ -47,7 +49,7 @@ GrowTech/
 
 ## 📅 Estado del proyecto
 
-🧪 **En desarrollo** – Actualmente se encuentra en fase de construcción del prototipo y pruebas de integración con sensores.  
+🔧 **Fase de prototipo** – Actualmente se está integrando el hardware con el software y realizando pruebas funcionales.  
 
 ---
 
