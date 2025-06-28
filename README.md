@@ -22,8 +22,8 @@ Este proyecto integra **hardware + software** para facilitar el monitoreo y prot
 
 ```bash
 GrowTech/
-├── backend/           # API REST (Node.js + Express)
-├── mobile-app/        # App móvil (React Native)
+├── API/           # API REST (Node.js + Express)
+├── APP-GROWTECH/        # App móvil (React Native)
 ├── firmware/          # Código para ESP32 y sensores
 ├── docs/              # Documentación del proyecto
 └── README.md          # Este archivo ✨
