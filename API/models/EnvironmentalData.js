@@ -10,7 +10,7 @@ const sensorSchema = new mongoose.Schema({
     green: { type: Number },
     blue: { type: Number }
   },
-  timestamp: { type: Date, default: Date.now }
-});
+  timestamp: { type: Date, default: Date.now, index: true }
+}, { versionKey: false });
 
 module.exports = mongoose.model('EnvironmentalData', sensorSchema);

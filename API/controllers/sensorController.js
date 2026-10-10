@@ -14,7 +14,8 @@ exports.saveData = async (req, res) => {
     await newData.save();
     res.status(201).json({ success: true, message: "Datos guardados" });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    console.error('Error al guardar datos del sensor:', error);
+    res.status(500).json({ success: false, error: 'Error al guardar datos.' });
   }
 };
 exports.getLatestData = async (req, res) => {

@@ -7,20 +7,26 @@ import { Ionicons } from '@expo/vector-icons';
 import HomeScreen from './screens/HomeScreen';
 import PlantSelection from './screens/PlantSelection';
 import MonitorScreen from './screens/MonitorScreen';
+import AuthScreen from './screens/AuthScreen';
+import { colors } from './theme';
 export type Plant = {
   id: string;
   name: string;
   description: string;
-  image?: any;
   idealConditions?: {
     temperature: { min: number; max: number };
     soilHumidity: { min: number; max: number };
     uvIndex: { max: number };
+    light?: { min: number; max: number };
+    color?: { red: number; green: number; blue: number };
+    airHumidity?: { min: number };
+    waterQuality?: { maxChlorine: number };
   };
 };
 
 export type RootStackParamList = {
   Home: undefined;
+  Auth: undefined;
   PlantSelection: undefined;
   Monitor: { plant: Plant }; 
 };
@@ -30,14 +36,18 @@ const MyTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    background: '#ffffff',
+    background: colors.background,
+    card: colors.surface,
+    text: colors.text,
+    border: colors.border,
+    primary: colors.primary,
   },
 };
 
 // Configuración del header
 const headerOptions: StackNavigationOptions = {
   headerStyle: {
-    backgroundColor: '#2E86C1',
+    backgroundColor: colors.primary,
     elevation: 0,
     shadowOpacity: 0,
   },
@@ -73,24 +83,27 @@ export default function Navigation() {
         />
 
         <Stack.Screen
+          name="Auth"
+          component={AuthScreen}
+          options={{ title: 'Tu cuenta' }}
+        />
+
+        <Stack.Screen
           name="PlantSelection"
           component={PlantSelection}
           options={{ 
-            title: '🌿 Elige tu planta',
-            headerStyle: {
-              backgroundColor: '#4CAF50',
-            },
+            title: 'Tus plantas',
           }}
         />
 
-<Stack.Screen 
-  name="Monitor" 
-  component={MonitorScreen as React.FC} // Solución clave
-  options={({ route }) => ({
-    title: `🌱 ${route.params.plant.name}`,
-    headerRight: () => <HeaderRightIcon />,
-  })}
-/>
+        <Stack.Screen 
+          name="Monitor" 
+          component={MonitorScreen}
+          options={({ route }) => ({
+            title: route.params.plant.name,
+            headerRight: () => <HeaderRightIcon />,
+          })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
